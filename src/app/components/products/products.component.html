@@ -1,0 +1,18 @@
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4" *ngFor="let product of products">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title" *ngIf="product.name">{{ product.name }}</h5>
+          <p class="card-text" *ngIf="product.price">Cena: {{ product.price }}</p>
+          <p class="card-text" *ngIf="product.short_description">Opis:</p>
+          <div class="card-text" *ngIf="product.short_description" [innerHTML]="product.short_description"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container  d-flex justify-content-center container mb-5 gap-3">
+    <button class="btn btn-dark" (click)="prevPage()" [disabled]="currentPage === 1"> << Poprzednia</button>
+    <button class="btn btn-dark" (click)="nextPage()">Następna >></button>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+p {
+    color: #182645;
+}
+
+.card {
+    transition: transform .2s; /* Animation */
+}
+  
+.card:hover {
+    transform: scale(1.05); 
+}
+  
+@media (max-width: 768px) {
+    .card {
+      margin: 0 auto; 
+    }
+}
